@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lucky Makeover Salon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for luxury feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #18121e;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #eee;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(115deg, #2c1962 60%, #d3a84e 120%);
+      color: #fff9e0;
+      text-align: center;
+      padding: 70px 16px 28px 16px;
+      border-bottom: 4px solid #b38728;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #ffd77b;
+      letter-spacing: 2px;
+      text-shadow: 1px 4px 9px #442d80;
+    }
+    header p {
+      font-size: 1.4em;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 38px auto;
+      background: #201431e6;
+      border-radius: 15px;
+      box-shadow: 0 7px 32px #0007;
+      padding: 28px 22px 14px 22px;
+      margin-bottom: 0px;
+    }
+    section {
+      border-left: 4px solid #d3a84e40;
+      margin-bottom: 40px;
+      padding-left: 18px;
+    }
+    h2, h3 {
+      color: #ffd77b;
+      font-family: 'Playfair Display', serif;
+      margin-top: 30px;
+      border-bottom: 1.5px solid #b38728;
+      padding-bottom: 5px;
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      background: #2b2042e6;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-collapse: collapse;
+      font-size: 1.06em;
+    }
+    th, td {
+      padding: 14px 9px;
+      border-bottom: 1.2px solid #3a2767;
+      color: #eadfa7;
+    }
+    th {
+      background: #261941;
+      color: #ffd77b;
+      letter-spacing: 1px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    td:last-child, th:last-child {
+      text-align: right;
+      font-weight: 700;
+    }
+    .gold {
+      color: #ffd77b;
+      font-weight: bold;
+    }
+    footer{
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Make the "Includes" column smaller only in the Luxury Packages table */
+    #packages table td:nth-child(2) {
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+
+    /* (Optional) also slightly reduce the header cell for "Includes" */
+    #packages table th:nth-child(2) {
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 800px) {
+      .container { padding: 10px; }
+      th, td { padding: 9px 4px; }
+    }
+    @media (max-width: 500px) {
+      header h1 { font-size: 2em; }
+      section { padding-left: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lucky Makeover Salon</h1>
+    <p>Book your appointment now for a luxurious transformation</p>
+  </header>
+  <!-- <nav>
+    <a href="#makeup">Makeup</a>
+    <a href="#facials">Facials</a>
+    <a href="#body">Body</a>
+    <a href="#mehndi">Mehndi</a>
+    <a href="#waxing">Waxing</a>
+    <a href="#nails">Nails</a>
+    <a href="#hair">Hair</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact">Contact</a>
+  </nav> -->
+  <div class="container">
+    <section id="makeup">
+      <h2>Luxury Makeup Services</h2>
+      <table>
+        <tr><th>Service</th><th class="gold">Price</th></tr>
+        <tr><td>Basic Makeup</td><td class="gold">10,000/-</td></tr>
+        <tr><td>Advance Makeup Studio</td><td class="gold">12,000/-</td></tr>
+        <tr><td>HD Makeup (Huda Beauty, Nars)</td><td class="gold">15,000/-</td></tr>
+        <tr><td>Air Brush Makeup, MAC Studio</td><td class="gold">18,000/-</td></tr>
+        <tr><td>Signature Look Makeup</td><td class="gold">22,000/-</td></tr>
+        <tr><td>International Brands (Charlotte Tilbury, Estee Lauder, Sephora, Tarte)</td><td class="gold">5,000/- & up</td></tr>
+        <tr><td>Reception, Engagement, Party, Bridal Makeup</td><td class="gold">5,000/- to 10,000/-</td></tr>
+      </table>
+    </section>
+    <section id="facials">
+      <h2>Premium Facials & Treatments</h2>
+      <table>
+        <tr><th>Facial Type</th><th class="gold">Price</th></tr>
+        <tr><td>Basic Gold/Diamond</td><td class="gold">1,500/-</td></tr>
+        <tr><td>O3+</td><td class="gold">2,000/-</td></tr>
+        <tr><td>Hydra Facial (Customized)</td><td class="gold">3,000/-</td></tr>
+        <tr><td>Cosmara, Kanpeki, Paragon</td><td class="gold">3,500/-</td></tr>
+        <tr><td>Korean Treatment</td><td class="gold">2,500/-</td></tr>
+        <tr><td>Blemish, Acne, Vedicline</td><td class="gold">2,000/-</td></tr>
+        <tr><td>D-TAN</td><td class="gold">1,000/-</td></tr>
+      </table>
+    </section>
+    <section id="body">
+      <h2>Body Rituals</h2>
+      <table>
+        <tr><th>Treatment</th><th class="gold">Price</th></tr>
+        <tr><td>Body Bleach + Scrub</td><td class="gold">1,500/-</td></tr>
+        <tr><td>Body Bleach + Polishing</td><td class="gold">2,000/-</td></tr>
+        <tr><td>Advance Body Therapy</td><td class="gold">2,500/-</td></tr>
+        <tr><td>Body Work</td><td class="gold">3,000/-</td></tr>
+      </table>
+    </section>
+    <section id="mehndi">
+      <h2>Designer Mehndi</h2>
+      <table>
+        <tr><th>Style</th><th class="gold">Price</th></tr>
+        <tr><td>Arabic</td><td class="gold">300/-</td></tr>
+        <tr><td>Full Hand</td><td class="gold">600/-</td></tr>
+        <tr><td>Basic</td><td class="gold">1,800/-</td></tr>
+        <tr><td>Advance</td><td class="gold">2,500/-</td></tr>
+        <tr><td>Professional</td><td class="gold">3,500/-</td></tr>
+      </table>
+    </section>
+    <section id="waxing">
+      <h2>Waxing & Care</h2>
+      <table>
+        <tr><th>Type</th><th class="gold">Price</th></tr>
+        <tr><td>Normal/Cream/Aloe Vera</td><td class="gold">500/-</td></tr>
+        <tr><td>Chocolate Wax</td><td class="gold">700/-</td></tr>
+        <tr><td>Rica/V.P. Wax</td><td class="gold">1,000/-</td></tr>
+      </table>
+      <table>
+        <tr><th>Manicure & Pedicure</th><th class="gold">Price</th></tr>
+        <tr><td>Basic</td><td class="gold">1,000/-</td></tr>
+        <tr><td>Advance + FYC</td><td class="gold">1,500/-</td></tr>
+        <tr><td>Professional, Aroma, Magic</td><td class="gold">2,500/-</td></tr>
+      </table>
+    </section>
+    <section id="nails">
+      <h2>Nail Bar</h2>
+      <table>
+        <tr><th>Service</th><th class="gold">Price</th></tr>
+        <tr><td>Basic Gel</td><td class="gold">1,500/-</td></tr>
+        <tr><td>Acrylic</td><td class="gold">2,000/-</td></tr>
+        <tr><td>Advance Art</td><td class="gold">2,500/-</td></tr>
+        <tr><td>Any Art, Refilling</td><td class="gold">150/-</td></tr>
+        <tr><td>Power Polishing</td><td class="gold">800/-</td></tr>
+      </table>
+    </section>
+    <section id="hair">
+      <h2>Hair & Spa</h2>
+      <table>
+        <tr><th>Treatment</th><th class="gold">Price</th></tr>
+        <tr><td>Smoothing</td><td class="gold">3,500/-</td></tr>
+        <tr><td>Botox</td><td class="gold">5,000/-</td></tr>
+        <tr><td>Basic Hair Spa</td><td class="gold">500/-</td></tr>
+        <tr><td>Advance Hair Spa</td><td class="gold">1,000/-</td></tr>
+        <tr><td>Keratin Normal</td><td class="gold">1,500/-</td></tr>
+        <tr><td>Keratin Advance</td><td class="gold">3,500/-</td></tr>
+        <tr><td>Silk, Nano Plastia, Botolis, Hydra Spa</td><td class="gold">5,000/- to 8,000/-</td></tr>
+      </table>
+    </section>
+    <section id="packages">
+      <h2>Luxury Packages</h2>
+      <table>
+        <tr><th>Package</th><th>Includes</th><th class="gold">Price</th></tr>
+        <tr>
+          <td>Package 1</td>
+          <td>Basic Makeup, 2 Facial, Manicure, Pedicure, Basic Spa, Temporary Nails, Full Body Wax, Full Face Threading</td>
+          <td class="gold">14,999/-</td>
+        </tr>
+        <tr>
+          <td>Package 2</td>
+          <td>HD Bridal, 2 Facial, Manicure, Pedicure, Advance Spa, Full Tip Nails, Full Body Wax, Full Face Threading</td>
+          <td class="gold">19,999/-</td>
+        </tr>
+        <tr>
+          <td>Package 3</td>
+          <td>Airbrush/Celebrity Bridal, 1 Party Makeup, 2 Facial, 1 Clean Up, Advanced Manicure & Pedicure, Hydra Spa, Gel Nail Extension, Body Wax & Polish, Face Threading</td>
+          <td class="gold">24,999/-</td>
+        </tr>
+        <tr>
+          <td>Package 4</td>
+          <td>Royal Glam Red Carpet Look, Celebrity Party Makeup, 2 Hydra Facial, Skin Testing, Silk Therapy, Advanced Manicure & Pedicure, Hydra Spa, Acrylic Nails, Body Wax & Polish, Face Threading</td>
+          <td class="gold">34,999/-</td>
+        </tr>
+      </table>
+  </div>
+  <footer>
+    <p>Made with 💛 in Patiala</p>
+  </footer>
+</body>
+</html>
