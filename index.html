@@ -4,59 +4,85 @@
   <meta charset="UTF-8">
   <title>Lucky Makeover Salon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Resource Hints for faster Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
   <!-- Google Fonts for luxury feel -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    :root{
+      /* Optional tweakable design tokens */
+      --bg:#18121e;
+      --panel:#201431e6;
+      --ink:#eee;
+      --gold:#ffd77b;
+      --gold-deep:#d3a84e;
+      --violet:#2c1962;
+      --panel-border:#b38728;
+    }
+
     body {
       margin: 0;
-      background: #18121e;
+      background: var(--bg);
       font-family: 'Montserrat', Arial, sans-serif;
-      color: #eee;
+      color: var(--ink);
       line-height: 1.6;
     }
+
     header {
-      background: linear-gradient(115deg, #2c1962 60%, #d3a84e 120%);
+      background: linear-gradient(115deg, var(--violet) 60%, var(--gold-deep) 120%);
       color: #fff9e0;
       text-align: center;
       padding: 70px 16px 28px 16px;
-      border-bottom: 4px solid #b38728;
+      border-bottom: 4px solid var(--panel-border);
     }
+
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3em;
       margin-bottom: 10px;
-      color: #ffd77b;
+      color: var(--gold);
       letter-spacing: 2px;
       text-shadow: 1px 4px 9px #442d80;
     }
+
     header p {
       font-size: 1.4em;
       letter-spacing: 1px;
       margin-bottom: 0;
     }
+
     .container {
       max-width: 1100px;
       margin: 38px auto;
-      background: #201431e6;
+      background: var(--panel);
       border-radius: 15px;
       box-shadow: 0 7px 32px #0007;
       padding: 28px 22px 14px 22px;
       margin-bottom: 0px;
     }
+
     section {
       border-left: 4px solid #d3a84e40;
       margin-bottom: 40px;
       padding-left: 18px;
     }
+
     h2, h3 {
-      color: #ffd77b;
+      color: var(--gold);
       font-family: 'Playfair Display', serif;
       margin-top: 30px;
-      border-bottom: 1.5px solid #b38728;
+      border-bottom: 1.5px solid var(--panel-border);
       padding-bottom: 5px;
       margin-bottom: 16px;
       font-weight: bold;
     }
+
     table {
       width: 100%;
       background: #2b2042e6;
@@ -66,33 +92,31 @@
       border-collapse: collapse;
       font-size: 1.06em;
     }
+
     th, td {
       padding: 14px 9px;
       border-bottom: 1.2px solid #3a2767;
       color: #eadfa7;
     }
+
     th {
       background: #261941;
-      color: #ffd77b;
+      color: var(--gold);
       letter-spacing: 1px;
     }
+
     tr:last-child td {
       border-bottom: none;
     }
+
     td:last-child, th:last-child {
       text-align: right;
       font-weight: 700;
     }
+
     .gold {
-      color: #ffd77b;
+      color: var(--gold);
       font-weight: bold;
-    }
-    footer{
-      display: flex;
-      justify-content: center;
-      margin-bottom:20px ;
-      font-size: smaller;
-      /* font-style: ; */
     }
 
     /* Make the "Includes" column smaller only in the Luxury Packages table */
@@ -101,18 +125,80 @@
       line-height: 1.4;
     }
 
-    /* (Optional) also slightly reduce the header cell for "Includes" */
+    /* Optional: slightly reduce the header cell for "Includes" */
     #packages table th:nth-child(2) {
       font-size: 0.95em;
+    }
+
+    /* Footer – glassy pill with gradient highlight and reduced-motion safe pulse */
+    footer {
+      display: flex;
+      justify-content: center;
+      margin: 28px auto 24px;
+      padding: 10px 16px;
+      width: fit-content;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(211, 168, 78, 0.35);
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.04);
+      font-size: clamp(0.9rem, 1.4vw, 1rem);
+      color: #f3e9c7;
+      letter-spacing: 0.02em;
+    }
+
+    footer p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      line-height: 1;
+    }
+
+    .text-gradient {
+      /* Fallback for older browsers */
+      color: var(--gold);
+      /* Gradient text */
+      background: linear-gradient(90deg, #ffd77b 0%, #ff9a76 55%, #d3a84e 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .heart {
+      width: 1.1em;
+      height: 1.1em;
+      display: inline-flex;
+      vertical-align: -0.1em;
+    }
+
+    .heart svg {
+      display: block;
+      transform-origin: center;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.12); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .heart svg { animation: none; }
     }
 
     @media (max-width: 800px) {
       .container { padding: 10px; }
       th, td { padding: 9px 4px; }
     }
+
     @media (max-width: 500px) {
       header h1 { font-size: 2em; }
       section { padding-left: 6px; }
+      footer { font-size: clamp(0.9rem, 3.2vw, 1rem); }
     }
   </style>
 </head>
@@ -136,6 +222,7 @@
         <tr><td>Reception, Engagement, Party, Bridal Makeup</td><td class="gold">5,000/- to 10,000/-</td></tr>
       </table>
     </section>
+
     <section id="facials">
       <h2>Premium Facials & Treatments</h2>
       <table>
@@ -149,6 +236,7 @@
         <tr><td>D-TAN</td><td class="gold">1,000/-</td></tr>
       </table>
     </section>
+
     <section id="body">
       <h2>Body Rituals</h2>
       <table>
@@ -159,6 +247,7 @@
         <tr><td>Body Work</td><td class="gold">3,000/-</td></tr>
       </table>
     </section>
+
     <section id="mehndi">
       <h2>Designer Mehndi</h2>
       <table>
@@ -170,6 +259,7 @@
         <tr><td>Professional</td><td class="gold">3,500/-</td></tr>
       </table>
     </section>
+
     <section id="waxing">
       <h2>Waxing & Care</h2>
       <table>
@@ -185,6 +275,7 @@
         <tr><td>Professional, Aroma, Magic</td><td class="gold">2,500/-</td></tr>
       </table>
     </section>
+
     <section id="nails">
       <h2>Nail Bar</h2>
       <table>
@@ -196,6 +287,7 @@
         <tr><td>Power Polishing</td><td class="gold">800/-</td></tr>
       </table>
     </section>
+
     <section id="hair">
       <h2>Hair & Spa</h2>
       <table>
@@ -209,6 +301,7 @@
         <tr><td>Silk, Nano Plastia, Botolis, Hydra Spa</td><td class="gold">5,000/- to 8,000/-</td></tr>
       </table>
     </section>
+
     <section id="packages">
       <h2>Luxury Packages</h2>
       <table>
@@ -234,9 +327,28 @@
           <td class="gold">34,999/-</td>
         </tr>
       </table>
+    </section>
   </div>
-  <footer>
-    <p>Made with <span>💜</span> in Patiala</p>
+
+  <!-- Refined footer -->
+  <footer aria-label="Made with love in Patiala">
+    <p>
+      Made with
+      <span class="heart" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="1em" height="1em" role="img" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="heartGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff6b9c"/>
+              <stop offset="60%" stop-color="#ffd77b"/>
+              <stop offset="100%" stop-color="#d3a84e"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#heartGradient)"
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6.02 4.02 4 6.5 4c1.74 0 3.41.81 4.5 2.09C12.59 4.81 14.26 4 16 4c2.48 0 4.5 2.02 4.5 4.5 0 3.78-3.4 6.86-8.55 11.53L12 21.35z"/>
+        </svg>
+      </span>
+      in <span class="text-gradient">Patiala</span>
+    </p>
   </footer>
 </body>
 </html>
